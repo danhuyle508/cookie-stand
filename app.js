@@ -87,3 +87,28 @@ var placeAlki ={
   }
 }
 placeAlki.cookiesSoldEveryHour();
+
+function place(min,max,place,average,hoursOfOperation,id){
+  this.min = min,
+  this.max = max,
+  this.id = id,
+  this.average = average,
+  this.place = place,
+  this.hoursOfOperation = hoursOfOperation,
+  this.arrayOfAverageNumberOfPeople = [],
+  this.cookiesPerHour = [],
+
+  this.calculateAverageNumberOfPeople = function (){
+      for(var i = 0; i < this.hoursOfOperation; i++){
+      var randNum = Math.round(Math.random() * (max - min) + min);
+      this.arrayOfAverageNumberOfPeople.push(randNum);
+    }
+  };
+  this.calculateCookiesPerHour = function (){
+    for(var i = 0; i < this.hoursOfOperation;i++){
+      var cookiesThisHour = Math.round(this.arrayOfAverageNumberOfPeople[i] * this.average);
+      this.cookiesPerHour.push(cookiesThisHour);
+    } 
+  }
+}
+var place1stAndPike = new place1standPike(23,65,'1st and Pike', 6.3, 15,"calculatedCookiesFor1stAndPike")
