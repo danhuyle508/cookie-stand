@@ -8,8 +8,8 @@ td{
     border-top:1px solid #ccc;
 }
 td, th {
-    padding: 10px;
+    padding: 8px;
 }
-th {
+#head {
     border-bottom:2px solid #ccc;
 }
