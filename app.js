@@ -28,18 +28,7 @@ function place(min,max,location,average,hoursOfOperation){
     } 
     console.log(this.cookiesPerHour);
   };
-  this.populateHoursOfTheDay = function(){
-    for(var i = 0;i < this.hoursOfOperation;i++){
-      var suffix = 'AM';
-      if(i > 7){
-        suffix ='PM'
-      }
-      this.hourOfTheDay.push(`${((i + 5) % 12) + 1 }:00 ${suffix}`);
-    }
-    console.log(this.hourOfTheDay);
-  };
   this.render = function(){
-    this.populateHoursOfTheDay();
     this.calculateAverageNumberOfPeople();
     this.calculateCookiesPerHour();
     var tableDataElement = document.getElementById('data');
@@ -81,6 +70,7 @@ function createTableHead(){
 }
 function createTableFooter(){
   var tableFooterElement = document.getElementById('footer');
+  tableFooterElement.innerHTML = "";
   var trElement = document.createElement('tr');
   var tdEl = document.createElement('th');
   tdEl.textContent = 'Total';
@@ -99,3 +89,16 @@ var placeCapitolHill = new place(20,38,'Capitol Hill', 2.3,14);
 var placeAlki = new place(2,16,'Alki', 4.6, 14);
 createTableHead();
 createTableFooter();
+
+//Waits until HTML has loaded before it runs these functions
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('submit').addEventListener('click',function(){
+   var x = document.getElementById("newStore");
+   var storeInfo = {};
+   for (var i = 0; i < x.length ;i++) {
+     storeInfo[x.elements[i].name] = x.elements[i].value;
+    }
+    var placeNew = new place(storeInfo.min,storeInfo.max,storeInfo.location,storeInfo.average,14);
+    createTableFooter();
+    });
+});
