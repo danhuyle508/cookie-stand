@@ -1,15 +1,75 @@
+html{
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
+
+}
 body {
-    font-family: 'Open Sans', sans-serif;
+    color: white;
 }
 table {
+    font-size: 20px;
+    display: block;
+    margin-left: 300px;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 50%;
     border-collapse: collapse;
 }
 td{
     border-top:1px solid #ccc;
 }
 td, th {
-    padding: 8px;
+    padding: 6px;
 }
 #head {
     border-bottom:2px solid #ccc;
+}
+tbody{
+    border-top: 1px solid #ccc;
+}
+#water{
+    position: static;
+    max-width: 100%;
+}
+img{
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+form{
+    font-size: 20px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    width: 20%;
+}
+header{
+    margin-top:200px;
+    margin-left: 550px;
+    margin-right: 550px;
+    width: 50%;
+    font-size: 60px;
+}
+#sales{
+    color: white;
+    margin-top:200px;
+    margin-left: 550px;
+    margin-right: 550px;
+    width: 50%;
+    font-size: 40px;
+}
+#backHome{
+    color: white;
+    margin-left: 50px;
+    font-size: 15px;
 }
