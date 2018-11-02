@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-
-</script>
-</head>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+  </head>
 
 <body>
-    <h1></h1>
-    <ul  id='cookiesCalculatedFor1stAndPike'></ul>
-    <ul id='cookiesCalculatedForSeaTacAirport'></ul>
+  <form id='newStore'>
+    Location:
+    <input type="text" name="location">
+    Minimun customers:
+    <input type="text" name="min">
+    Maximum customers:
+    <input type="text" name="max">
+    Average cookies purchased per customer:
+    <input type="text" name="average">
+    
+  </form>
+  <button id='submit'>submit</button>
+  <table>
+    <thead id='head'></thead>
+    <tbody id='data'></tbody>
+    <tfoot id='footer'></tfoot>
+  </table>
+  <a id='backHome' href='home.html'>Go Back</a>
 </body>
 <script src = 'app.js'></script>
-</html
+</html>
