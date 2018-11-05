@@ -81,6 +81,16 @@ function createTableFooter(){
     trElement.appendChild(tdElement);
   }
   tableFooterElement.appendChild(trElement);
+  var tfTotal = document.createElement('tf');
+  tfTotal.appendChild(totalTheTotals());
+  tableFooterElement.appendChild(tfTotal);
+}
+function totalTheTotals(){
+  var totalOfAllStores = 0;
+  for(var i= 0; i < totalOfTheHour.length; i++){
+    totalOfAllStores += totalOfTheHour[i]
+  }
+  return totalOfAllStores;
 }
 var place1stAndPike = new place(23,65,'1st and Pike', 6.3, 14);
 var placeSeaTacAirport = new place(3,24,'SeaTac Airport', 1.2, 14);
