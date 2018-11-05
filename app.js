@@ -88,6 +88,7 @@ function createTableFooter(){
   trElement.appendChild(tdTotal);
   tableFooterElement.appendChild(trElement);
 }
+//totals the totals
 function totalTheTotals(){
   for(var i= 0; i < totalOfTheHour.length; i++){
     totalOfAllStores += totalOfTheHour[i]
