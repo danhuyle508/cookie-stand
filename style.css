@@ -114,3 +114,16 @@ header{
     position: absolute;
     left: 840px;
 }
+.contactUs{
+    margin: 50px 300px;
+}
+.chinook{
+    float: right;
+}
+.contact{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    left: 960px;
+    top: 700px;
+}
