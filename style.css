@@ -68,8 +68,49 @@ header{
     width: 50%;
     font-size: 40px;
 }
+#store{
+    color: white;
+    margin-left: 700px;
+    margin-right: 650px;
+    width: 50%;
+    font-size: 40px;
+}
+
 #backHome{
     color: white;
     margin-left: 50px;
     font-size: 15px;
+}
+.storePage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.cutters{
+    font-size: 20px;
+    margin-top: 25px;
+    position: relative;
+    left:450px;
+}
+.apparel{
+    font-size: 20px;
+    margin-top: 25px;
+    position: relative;
+    left:450px;
+}
+.mainContent{
+    margin: 50px 70px;
+}
+.ourStory{
+    margin: 20px 320px;
+}
+.aboutUsTitle{
+    margin: 50px 550px;
+}
+.aboutUs{
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    left: 840px;
 }
