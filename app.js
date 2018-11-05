@@ -2,6 +2,7 @@
 var hours =['6:00 AM',	'7:00 AM',	'8:00 AM',	'9:00 AM',	'10:00 AM',	'11:00 AM',	'12:00 PM',	'1:00 PM',	'2:00 PM',	'3:00 PM',	'4:00 PM',	'5:00 PM',	'6:00 PM',	'7:00 PM'];
 var totalOfTheHour = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var totalCookies = [];
+var totalOfAllStores = 0;
 
 function place(min,max,location,average,hoursOfOperation){
   this.min = min,
@@ -69,6 +70,7 @@ function createTableHead(){
   tableHeadElement.appendChild(trElement);
 }
 function createTableFooter(){
+  totalTheTotals();
   var tableFooterElement = document.getElementById('footer');
   tableFooterElement.innerHTML = "";
   var trElement = document.createElement('tr');
@@ -81,16 +83,15 @@ function createTableFooter(){
     trElement.appendChild(tdElement);
   }
   tableFooterElement.appendChild(trElement);
-  var tfTotal = document.createElement('tf');
-  tfTotal.appendChild(totalTheTotals());
-  tableFooterElement.appendChild(tfTotal);
+  var tdTotal = document.createElement('td');
+  tdTotal.textContent = totalOfAllStores;
+  trElement.appendChild(tdTotal);
+  tableFooterElement.appendChild(trElement);
 }
 function totalTheTotals(){
-  var totalOfAllStores = 0;
   for(var i= 0; i < totalOfTheHour.length; i++){
     totalOfAllStores += totalOfTheHour[i]
   }
-  return totalOfAllStores;
 }
 var place1stAndPike = new place(23,65,'1st and Pike', 6.3, 14);
 var placeSeaTacAirport = new place(3,24,'SeaTac Airport', 1.2, 14);
